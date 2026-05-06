@@ -104,7 +104,6 @@ public:
             case Subtract: result = left - right; break;
             case Multiply: result = left * right; break;
             case Divide:
-                if (right == 0.0) throw FormulaError(FormulaError::Category::Arithmetic);
                 result = left / right; break;
             default: throw std::logic_error("Unknown binary operation");
         }
